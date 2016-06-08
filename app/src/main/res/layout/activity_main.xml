@@ -225,14 +225,5 @@
             android:layout_weight="1"
             android:text="@string/OperationEquals"
             android:onClick="equals"/>
-
-            <!--&lt;!&ndash; + &ndash;&gt;-->
-            <!--<Button-->
-                <!--android:id="@+id/buttonPlus"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_weight="1"-->
-                <!--android:text="@string/OperationPlus"-->
-                <!--android:onClick="addition"/>-->
     </TableRow>
 </TableLayout>

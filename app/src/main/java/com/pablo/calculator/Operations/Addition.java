@@ -17,9 +17,6 @@ public class Addition extends OperationButton implements Calculation {
     public double result(double first, double second) {
         return first + second;
     }
-
-    @Override
-    public String addToString(String beginValue) {
-        return super.addToString(beginValue);
-    }
 }
+
+

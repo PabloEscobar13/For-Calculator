@@ -20,20 +20,10 @@ public class NumberButton extends Button{
         this.value = value;
     }
 
-
-
     @Override
     public String addToString(String beginValue) {
 
         String number = Integer.toString(value);
         return super.addToString(beginValue) + number;
     }
-
-    //    @Override
-//    public void clickButton(View view) {
-//        calculatedValue = calculatedValue + numberButton.getValue();
-//
-//
-//    }
-
 }
