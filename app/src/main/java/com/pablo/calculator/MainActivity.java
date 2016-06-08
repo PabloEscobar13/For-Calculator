@@ -18,7 +18,7 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    String calculatedValue="";
+    String calculatedValue = "";
     TextView textView;
     double firstDouble;
     double secondDouble;
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     NumberButton numberButton8 = new NumberButton(8);
     NumberButton numberButton9 = new NumberButton(9);
 
-    OperationButton buttonAdd = new Addition ();
+    OperationButton buttonAdd = new Addition();
     OperationButton buttonSubtract = new Subtraction();
     OperationButton buttonMultiply = new Multiplication();
     OperationButton buttonDivide = new Division();
@@ -113,12 +113,17 @@ public class MainActivity extends AppCompatActivity {
     public void addition(View view) {
 
         try {
-            firstDouble = Double.parseDouble(calculatedValue);
+
+            if (calculatedValue == ""){
+
+            }else {
+                firstDouble = Double.parseDouble(calculatedValue);
+            }
             calculatedValue = buttonAdd.addToString(calculatedValue);
             textView.setText(calculatedValue);
             calculatedValue = "";
             theCalculate = buttonAdd;
-        }catch (Exception ex){
+        }catch (IllegalStateException ex){
 
         }
     }
@@ -127,12 +132,16 @@ public class MainActivity extends AppCompatActivity {
 
         try {
 
-            firstDouble = Double.parseDouble(calculatedValue);
+            if (calculatedValue == ""){
+
+            }else {
+                firstDouble = Double.parseDouble(calculatedValue);
+            }
             calculatedValue = buttonSubtract.addToString(calculatedValue);
             textView.setText(calculatedValue);
             calculatedValue = "";
             theCalculate = buttonSubtract;
-        }catch (Exception ex){
+        } catch (Exception ex) {
 
         }
     }
@@ -140,12 +149,17 @@ public class MainActivity extends AppCompatActivity {
     public void multiplication(View view) {
 
         try {
-            firstDouble = Double.parseDouble(calculatedValue);
+
+            if (calculatedValue == ""){
+
+            }else {
+                firstDouble = Double.parseDouble(calculatedValue);
+            }
             calculatedValue = buttonMultiply.addToString(calculatedValue);
             textView.setText(calculatedValue);
             calculatedValue = "";
             theCalculate = buttonMultiply;
-        }catch (Exception ex){
+        } catch (Exception ex) {
 
         }
     }
@@ -153,12 +167,15 @@ public class MainActivity extends AppCompatActivity {
     public void division(View view) {
 
         try {
-            firstDouble = Double.parseDouble(calculatedValue);
-            calculatedValue = buttonDivide.addToString(calculatedValue);
+            if (calculatedValue == ""){
+
+            }else {
+                firstDouble = Double.parseDouble(calculatedValue);
+            }            calculatedValue = buttonDivide.addToString(calculatedValue);
             textView.setText(calculatedValue);
             calculatedValue = "";
             theCalculate = buttonDivide;
-        }catch (Exception ex){
+        } catch (Exception ex) {
 
         }
     }
@@ -178,9 +195,15 @@ public class MainActivity extends AppCompatActivity {
             firstDouble = res;
             calculatedValue = format.format(res);
             textView.setText(calculatedValue);
+            theCalculate = null;
             calculatedValue = "";
-        }catch (Exception ex){
+        } catch (Exception ex) {
 
         }
-}
+    }
+
+    public void deleteAll(View view) {
+        calculatedValue = "";
+        textView.setText(calculatedValue);
+    }
 }

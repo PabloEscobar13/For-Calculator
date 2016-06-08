@@ -17,4 +17,6 @@
     <string name="OperationDivide">/</string>
     <string name="Comma">,</string>
     <string name="CalcText">Calculated Number</string>
+    <string name="DeleteAll">CE</string>
+    <string name="Delete">C</string>
 </resources>

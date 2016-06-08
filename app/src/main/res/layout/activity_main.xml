@@ -8,7 +8,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.pablo.calculator.MainActivity">
+    tools:context="com.pablo.calculator.MainActivity"
+    android:stretchColumns="0,1,2,3"
+    android:shrinkColumns="0,1,2,3">
 
 
     <TableRow
@@ -24,6 +26,41 @@
             android:layout_span="4"
             android:textSize="40sp" />
 
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:measureWithLargestChild="false">
+
+        <!-- CE -->
+        <Button
+            android:id="@+id/CE"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="12"
+            android:text="@string/DeleteAll"
+            android:onClick="deleteAll"/>
+
+        <!-- C -->
+        <Button
+            android:id="@+id/C"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/Delete"
+            android:onClick="add8"/>
+
+        <!-- / -->
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/OperationDivide"
+            android:onClick="division"/>
 
     </TableRow>
 
@@ -56,17 +93,17 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/Number8"
+            android:text="@string/Number9"
             android:onClick="add9"/>
 
-        <!-- / -->
+        <!-- * -->
         <Button
-            android:id="@+id/buttonDivide"
+            android:id="@+id/buttonMultiply"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/OperationDivide"
-            android:onClick="division"/>
+            android:text="@string/OperationMultiply"
+            android:onClick="multiplication"/>
     </TableRow>
 
 
@@ -102,20 +139,20 @@
             android:text="@string/Number6"
             android:onClick="add6"/>
 
-        <!-- * -->
+        <!-- - -->
         <Button
-            android:id="@+id/buttonMultiply"
+            android:id="@+id/buttonMinus"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/OperationMultiply"
-            android:onClick="multiplication"/>
+            android:text="@string/OperationMinus"
+            android:onClick="subtraction"/>
     </TableRow>
 
 
     <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_weight="1">
 
         <!-- 1 -->
@@ -146,20 +183,20 @@
             android:text="@string/Number3"
             android:onClick="add3"/>
 
-        <!-- - -->
+        <!-- + -->
         <Button
-            android:id="@+id/buttonMinus"
+            android:id="@+id/buttonPlus"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/OperationMinus"
-            android:onClick="subtraction"/>
+            android:text="@string/OperationPlus"
+            android:onClick="addition"/>
     </TableRow>
 
 
     <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_weight="1">
 
         <!-- 0 -->
@@ -167,7 +204,7 @@
             android:id="@+id/button0"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="1"
+            android:layout_weight="12"
             android:text="@string/Number0"
             android:onClick="add0"/>
 
@@ -189,16 +226,13 @@
             android:text="@string/OperationEquals"
             android:onClick="equals"/>
 
-        <!-- + -->
-        <Button
-            android:id="@+id/buttonPlus"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:text="@string/OperationPlus"
-            android:onClick="addition"/>
+            <!--&lt;!&ndash; + &ndash;&gt;-->
+            <!--<Button-->
+                <!--android:id="@+id/buttonPlus"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="@string/OperationPlus"-->
+                <!--android:onClick="addition"/>-->
     </TableRow>
-
-
-
 </TableLayout>
