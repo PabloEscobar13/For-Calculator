@@ -44,14 +44,14 @@
             android:text="@string/DeleteAll"
             android:onClick="deleteAll"/>
 
-        <!-- C -->
-        <Button
-            android:id="@+id/C"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/Delete"
-            android:onClick="add8"/>
+        <!--&lt;!&ndash; C &ndash;&gt;-->
+        <!--<Button-->
+            <!--android:id="@+id/C"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="@string/Delete"-->
+            <!--android:onClick=""/>-->
 
         <!-- / -->
         <Button
